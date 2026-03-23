@@ -1,0 +1,74 @@
+package com.juhyeon.androidds.ui.icon
+
+import com.juhyeon.androidds.ui.R
+
+object BasicIcons {
+    val Add = R.drawable.ic_basic_add
+    val AddPhoto = R.drawable.ic_basic_add_photo
+    val ArrowBack = R.drawable.ic_basic_arrow_back
+    val ArrowDownLarge = R.drawable.ic_basic_arrow_down_large
+    val ArrowForward = R.drawable.ic_basic_arrow_forward
+    val ArrowLeftLarge = R.drawable.ic_basic_arrow_left_large
+    val ArrowRightLarge = R.drawable.ic_basic_arrow_right_large
+    val ArrowUpLarge = R.drawable.ic_basic_arrow_up_large
+    val Attachment = R.drawable.ic_basic_attachment
+    val Block = R.drawable.ic_basic_block
+    val Bolt = R.drawable.ic_basic_bolt
+    val Call = R.drawable.ic_basic_call
+    val Cancel = R.drawable.ic_basic_cancel
+    val Chat = R.drawable.ic_basic_chat
+    val Check = R.drawable.ic_basic_check
+    val CheckboxChecked = R.drawable.ic_basic_checkbox_checked
+    val CheckboxUnchecked = R.drawable.ic_basic_checkbox_unchecked
+    val Close = R.drawable.ic_basic_close
+    val CloudUpload = R.drawable.ic_basic_cloud_upload
+    val Comment = R.drawable.ic_basic_comment
+    val Copy = R.drawable.ic_basic_copy
+    val CreditCard = R.drawable.ic_basic_credit_card
+    val Delete = R.drawable.ic_basic_delete
+    val DragHandle = R.drawable.ic_basic_drag_handle
+    val Edit = R.drawable.ic_basic_edit
+    val Error = R.drawable.ic_basic_error
+    val ErrorFilled = R.drawable.ic_basic_error_filled
+    val FileDownload = R.drawable.ic_basic_file_download
+    val FileDownloadDone = R.drawable.ic_basic_file_download_done
+    val FileUpload = R.drawable.ic_basic_file_upload
+    val Filter = R.drawable.ic_basic_filter
+    val GoTop = R.drawable.ic_basic_gotop
+    val HashTag = R.drawable.ic_basic_hashtag
+    val Help = R.drawable.ic_basic_help
+    val HomeFilledFalse = R.drawable.ic_basic_home_filled_false
+    val HomeFilledTrue = R.drawable.ic_basic_home_filled_true
+    val Image = R.drawable.ic_basic_image
+    val Info = R.drawable.ic_basic_info
+    val Instagram = R.drawable.ic_basic_instagram
+    val Kakao = R.drawable.ic_basic_kakao
+    val Lock = R.drawable.ic_basic_lock
+    val Mail = R.drawable.ic_basic_mail
+    val Map = R.drawable.ic_basic_map
+    val Menu = R.drawable.ic_basic_menu
+    val MyFilledFalse = R.drawable.ic_basic_my_filled_false
+    val MyFilledTrue = R.drawable.ic_basic_my_filled_true
+    val Notification = R.drawable.ic_basic_notification
+    val Order = R.drawable.ic_basic_order
+    val PhoneDisabled = R.drawable.ic_basic_phone_disabled
+    val Photo = R.drawable.ic_basic_photo
+    val RadioButtonChecked = R.drawable.ic_basic_radiobutton_checked
+    val RadioButtonUnchecked = R.drawable.ic_basic_radiobutton_unchecked
+    val Refresh = R.drawable.ic_basic_refresh
+    val Remove = R.drawable.ic_basic_remove
+    val Report = R.drawable.ic_basic_report
+    val Search = R.drawable.ic_basic_search
+    val Security = R.drawable.ic_basic_security
+    val Send = R.drawable.ic_basic_send
+    val ShoppingBag = R.drawable.ic_basic_shopping_bag
+    val Sorting = R.drawable.ic_basic_sorting
+    val StarFilled = R.drawable.ic_basic_star_filled
+    val StarLine = R.drawable.ic_basic_star_line
+    val Timer = R.drawable.ic_basic_timer
+    val UnLock = R.drawable.ic_basic_unlock
+    val User = R.drawable.ic_basic_user
+    val Visibility = R.drawable.ic_basic_visibility
+    val VisibilityOff = R.drawable.ic_basic_visibility_off
+    val Warning = R.drawable.ic_basic_warning
+}

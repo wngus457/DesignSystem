@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
@@ -29,6 +30,8 @@ android {
 }
 
 dependencies {
+    implementation(projects.extension)
+
     implementation(platform(libs.compose.bom))
     implementation(libs.bundles.compose)
 
