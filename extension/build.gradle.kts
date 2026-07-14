@@ -66,7 +66,7 @@ afterEvaluate {
 
                 groupId = "com.juhyeon.androidds"
                 artifactId = "extension"
-                version = "1.0.1"
+                version = "1.0.2"
 
                 pom {
                     name.set("AndroidDS Extension")
