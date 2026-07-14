@@ -9,6 +9,9 @@ jobs:
   publish:
     if: ${{ github.event.pull_request.merged }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
 
     steps:
       - name: Checkout repository
