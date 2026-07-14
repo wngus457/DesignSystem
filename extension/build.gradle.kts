@@ -1,8 +1,19 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    `maven-publish`
 }
+
+val localProperties = Properties().apply {
+    val localPropertiesFile = rootProject.file("local.properties")
+    if (localPropertiesFile.exists()) {
+        load(localPropertiesFile.inputStream())
+    }
+}
+
 
 android {
     namespace = "com.juhyeon.androidds.extension"
@@ -37,4 +48,41 @@ dependencies {
 
     implementation(libs.coil.core)
     implementation(libs.coil.compose)
+}
+
+android {
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
+}
+
+afterEvaluate {
+    extensions.configure<PublishingExtension> {
+        publications {
+            register<MavenPublication>("release") {
+                from(components["release"])
+
+                groupId = "com.juhyeon.androidds"
+                artifactId = "extension"
+                version = "1.0.0"
+
+                pom {
+                    name.set("AndroidDS Extension")
+                    description.set("Extension library for Android Design System")
+                }
+            }
+        }
+        repositories {
+            maven {
+                name = "GitHubPackages"
+                url = uri("https://maven.pkg.github.com/${System.getenv("GITHUB_REPOSITORY") ?: "wngus457/DesignSystem"}")
+                credentials {
+                    username = System.getenv("GITHUB_ACTOR") ?: ""
+                    password = System.getenv("GITHUB_TOKEN") ?: ""
+                }
+            }
+        }
+    }
 }

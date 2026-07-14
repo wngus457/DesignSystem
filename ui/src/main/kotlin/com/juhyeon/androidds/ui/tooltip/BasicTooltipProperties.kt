@@ -1,17 +1,22 @@
 package com.juhyeon.androidds.ui.tooltip
 
+import androidx.compose.runtime.Stable
+
 sealed interface BasicTooltipProperties
 
+@Stable
 sealed interface TooltipHeader : BasicTooltipProperties {
     data class True(val title: String) : TooltipHeader
     data object False : TooltipHeader
 }
 
+@Stable
 sealed interface TooltipColor : BasicTooltipProperties {
     data object Black : TooltipColor
     data object White : TooltipColor
 }
 
+@Stable
 sealed interface TooltipPosition : BasicTooltipProperties {
     data object TopCenter : TooltipPosition
     data object TopStart : TooltipPosition

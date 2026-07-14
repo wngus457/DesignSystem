@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.android)
+    `maven-publish`
 }
 
 android {
@@ -42,4 +43,41 @@ dependencies {
     implementation(libs.accompainst.permission)
     implementation(libs.lottie.compose)
     implementation(libs.serialization)
+}
+
+android {
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
+}
+
+afterEvaluate {
+    extensions.configure<PublishingExtension> {
+        publications {
+            register<MavenPublication>("release") {
+                from(components["release"])
+
+                groupId = "com.juhyeon.androidds"
+                artifactId = "ui"
+                version = "1.0.0"
+
+                pom {
+                    name.set("AndroidDS UI")
+                    description.set("UI library for Android Design System")
+                }
+            }
+        }
+        repositories {
+            maven {
+                name = "GitHubPackages"
+                url = uri("https://maven.pkg.github.com/${System.getenv("GITHUB_REPOSITORY") ?: "wngus457/DesignSystem"}")
+                credentials {
+                    username = System.getenv("GITHUB_ACTOR") ?: ""
+                    password = System.getenv("GITHUB_TOKEN") ?: ""
+                }
+            }
+        }
+    }
 }
