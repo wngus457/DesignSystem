@@ -2,6 +2,8 @@
 
 Jetpack Compose 기반의 Android UI 컴포넌트 라이브러리입니다.
 
+[피그마 링크](https://www.figma.com/design/YxCoz4i0WeQ2MAOilpMXBy/Design-System?node-id=0-1&t=yDmusXSpuhLaTJK1-1)
+
 ## Installation
 
 ### GitHub Packages 설정
